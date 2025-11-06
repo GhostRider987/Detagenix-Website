@@ -1,0 +1,275 @@
+.about-section {
+  background: linear-gradient(135deg, #0c1b3d, #1a2f6b);
+  color: #fff;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.section-title {
+  color: #00bfff;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 3rem;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #00bfff;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
+
+
+.lead {
+  color: #e0e6ff;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.7;
+}
+
+.highlight {
+  color: #00bfff;
+  font-weight: 600;
+}
+
+.vision-mission {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.vision-mission .glass-card {
+  padding: 50px 30px;          
+  min-height: 280px;            
+  font-size: 1.4rem;
+  box-shadow: 0 8px 30px rgba(0, 191, 255, 0.2);
+  background: #ffffff;
+  color: #0c1b3d;
+  transition: all 0.4s ease;
+  border-radius: 22px;
+}
+
+.vision-mission .glass-card h3 {
+  font-weight: 800;
+  color: #0c1b3d;
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.vision-mission .glass-card p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.vision-mission .glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+  .vision-mission .glass-card {
+    min-height: auto;
+    padding: 35px 20px;
+    font-size: 0.95rem;
+  }
+}
+
+
+.team-photo {
+  width: 100%;
+  border-radius: 50%;
+  height: 250px;
+  object-fit: cover;
+  border: 2px solid #00bfff;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.team-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 18px;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(0,191,255,0.18);
+}
+
+.team-card h4 {
+  color: #0c1b3d;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.team-card p {
+  color: #444;
+  font-size: 1.1rem;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 600ms cubic-bezier(.2,.9,.2,1), transform 600ms cubic-bezier(.2,.9,.2,1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.why-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0 10px;
+  scrollbar-width: thin;
+  scrollbar-color: #00bfff rgba(255, 255, 255, 0.1);
+}
+
+.why-slider::-webkit-scrollbar {
+  height: 8px;
+}
+
+.why-slider::-webkit-scrollbar-thumb {
+  background-color: #00bfff;
+  border-radius: 10px;
+}
+
+.why-slider::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.why-card {
+  flex: 0 0 280px; 
+  scroll-snap-align: center;
+  background: #ffffff;
+  color: #0c1b3d;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.2);
+}
+
+.why-card h5 {
+  color: #0c1b3d;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.why-card p {
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.why-us-section {
+  margin-top: 60px;
+}
+
+@media (max-width: 768px) {
+  .why-card {
+    flex: 0 0 240px;
+  }
+}
+
+.why-slider-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.why-slider-wrapper::before,
+.why-slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.why-slider-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(12, 27, 61, 1), rgba(12, 27, 61, 0));
+}
+
+.why-slider-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(26, 47, 107, 1), rgba(26, 47, 107, 0));
+}
+
+
+.why-slider {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+}
+
+.why-card {
+  flex: 0 0 280px;
+  white-space: normal;
+  background: #fff;
+  border-radius: 12px;
+  color: #0c1b3d;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.25);
+}
+
+
+@media (max-width: 768px) {
+  .why-card {
+    flex: 0 0 240px;
+  }
+}
+
+
+@media (max-width: 992px) {
+  .lead {
+    font-size: 0.95rem;
+  }
+  .team-photo {
+    height: 150px;
+  }
+  .glass-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+}

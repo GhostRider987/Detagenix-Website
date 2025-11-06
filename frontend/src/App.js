@@ -7,6 +7,8 @@ import BlogPage from "./pages/Blog/BlogPage.jsx";
 import BlogDetailPage from "./pages/Blog/BlogDetailPage.jsx";
 import Service from "./pages/Service/Service.jsx";
 import Projectpage from "./pages/Project/Projectpage.jsx";
+import Contactus from "./pages/Contact/Contactus.jsx"; 
+import Aboutus from "./pages/About/Aboutus.jsx"; 
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Service />} />
         <Route path="/projects" element={<Projectpage />} />
+        <Route path="/about" element={<Aboutus />} />
+        <Route path="/contact" element={<Contactus />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
       </Routes>

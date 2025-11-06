@@ -1,3 +1,8 @@
+
+body {
+  background: #0f172a !important;
+  color: white !important;
+} 
 .blog-detail-container {
   width: 90%;
   max-width: 850px;
@@ -17,12 +22,12 @@
   font-size: 32px;
   font-weight: 700;
   margin-bottom: 10px;
-  color: #111;
+  color: #ffffff;
 }
 
 .blog-detail-meta {
   font-size: 15px;
-  color: #666;
+  color: #d4d2d2;
   margin-bottom: 15px;
 }
 
@@ -53,7 +58,9 @@
 }
 
 .blog-detail-content p {
-  margin-bottom: 20px;
+ 
+  color: #d4d2d2;
+     margin-bottom: 20px;
 }
 
 /* Prev / Next */
@@ -65,8 +72,8 @@
 
 .nav-btn {
   padding: 10px 16px;
-  background: #111;
-  color: white;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
   border-radius: 8px;
   text-decoration: none;
   transition: 0.2s;

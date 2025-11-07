@@ -62,14 +62,15 @@
 }
 
 .btn-primary {
-  background: #ffffff;
+  background: #ffffff !important;
   color: #007bff;
 }
 
 .btn-secondary {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  background: #ffffff!important;
+  color: #007bff !important;
+  border: none !important;
+  
 }
 
 .btn-primary:hover {
@@ -80,7 +81,7 @@
 
 .btn-secondary:hover {
   background: #ffffff;
-  color: #007bff;
+  color: #007bff !important;
   transform: translateY(-2px);
 }
 

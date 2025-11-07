@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useEffect } from "react";
 import Services from "../../components/Servicessection/Services";
 import { servicespageData } from "../../data/servicespageData";
 import ServiceModal from "../../components/ServicePage/ServiceModal";
@@ -30,6 +31,9 @@ const Service = () => {
     setOpenDetail(false);
     setOpenForm(true);
   };
+   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
   return (
     <section className="services-section service-page">

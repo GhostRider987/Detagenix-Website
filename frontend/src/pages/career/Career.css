@@ -1,0 +1,334 @@
+.careers-page {
+  background: linear-gradient(135deg, #0c1b3d, #1a2f6b);
+  color: #fff;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.care-hero {
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.care-hero .section-title {
+  font-size: 2.4rem;
+}
+
+.care-hero .lead {
+  color: rgba(224,230,255,0.95);
+}
+
+
+.section-subtitle {
+  color: #00bfff;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+
+.openings {
+  padding: 40px 0;
+}
+
+.job-card {
+  background: rgba(255,255,255,0.98);
+  color: #0c1b3d;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 35px rgba(0,191,255,0.14);
+}
+
+.job-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.job-head h3 {
+  margin:0;
+  font-size:1.1rem;
+  color:#0c1b3d;
+}
+.job-type {
+  background:#eaf6ff;
+  color:#0c1b3d;
+  padding:6px 10px;
+  border-radius:20px;
+  font-size:0.82rem;
+}
+
+
+.job-meta {
+  list-style:none;
+  padding:0;
+  margin:12px 0;
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  color:#5b6b89;
+}
+
+.job-actions {
+  display:flex;
+  gap:8px;
+}
+
+
+.apply-section {
+  padding: 40px 0 80px;
+}
+
+.apply-form {
+  background: rgba(255,255,255,0.03);
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+}
+
+
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+
+.form-group .form-control {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  color: #fff;
+  outline: none;
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.75);
+  transition: all 0.22s ease;
+  pointer-events: none;
+  font-size: 0.95rem;
+}
+
+
+.form-group .form-control:focus + label,
+.form-group .form-control:not(:focus):not([value=""]) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:focus):not(:placeholder-shown) + label {
+  top: 8px;
+  left: 12px;
+  font-size: 0.78rem;
+  color: #00bfff;
+}
+
+
+
+.file-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 48px; 
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+
+.file-label {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  text-align: left;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+  z-index: 1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+
+.file-label:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #00bfff;
+}
+
+.file-label.selected {
+  background: rgba(0, 191, 255, 0.12);
+  color: #00bfff;
+  border-color: rgba(0, 191, 255, 0.3);
+}
+
+
+.form-text {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.65);
+  text-align: left;
+}
+
+
+
+.why-apply-card {
+  background:#ffffff;
+  color:#0c1b3d;
+  border-radius:12px;
+  padding:18px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+.testimonials h4 { color:#00bfff; margin-bottom:12px; }
+.testi-slider {
+  display:flex;
+  gap:12px;
+  flex-direction:column;
+}
+.testi-card {
+  background: rgba(255,255,255,0.98);
+  color:#0c1b3d;
+  padding:12px 16px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.testimonials {
+  text-align: left;
+  margin-top: 40px;
+  position: relative;
+}
+
+.testimonials h4 {
+  color: #00bfff;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+
+.testi-carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  height: 180px;
+}
+
+
+.testi-item {
+  flex: 0 0 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease;
+  position: absolute;
+  width: 100%;
+}
+
+
+.testi-item.active {
+  opacity: 1;
+  transform: translateX(0);
+  position: relative;
+}
+
+
+.testi-card {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0c1b3d;
+  padding: 18px 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 500px;
+}
+
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.carousel-dot.active {
+  background: #00bfff;
+  transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+  background: #00bfff;
+  transform: scale(1.1);
+  opacity: 0.9;
+}
+
+
+@media (max-width: 768px) {
+  .testi-card {
+    padding: 14px;
+    font-size: 0.9rem;
+  }
+  .testi-carousel {
+    height: 200px;
+  }
+}
+
+
+
+.btn-outline-primary {
+  color:#00bfff;
+  border-color: rgba(0,191,255,0.16);
+  background: transparent;
+}
+.btn-outline-primary:hover { background: rgba(0,191,255,0.06); }
+
+
+.care-footer { padding: 30px 0; color: rgba(255,255,255,0.85); }
+
+
+.care-fade { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.care-fade.visible { opacity: 1; transform: translateY(0); }
+
+
+@media (max-width: 992px) {
+  .care-hero .section-title { font-size: 2rem; }
+}
+@media (max-width: 576px) {
+  .team-photo { height: 140px; }
+  .why-card { flex:0 0 220px; }
+}

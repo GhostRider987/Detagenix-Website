@@ -9,6 +9,7 @@ import Service from "./pages/Service/Service.jsx";
 import Projectpage from "./pages/Project/Projectpage.jsx";
 import Contactus from "./pages/Contact/Contactus.jsx"; 
 import Aboutus from "./pages/About/Aboutus.jsx"; 
+import Careers from "./pages/career/Career.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/contact" element={<Contactus />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/blog/:slug" element={<BlogDetailPage />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
       <Footer />
     </>

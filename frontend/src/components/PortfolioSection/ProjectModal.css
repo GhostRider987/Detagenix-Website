@@ -47,7 +47,9 @@ Fullscreen overlay
   font-size: 24px;
   font-weight: 700;
 }
-
+.modal-content h3 {
+ color: black;
+}
 /* Tech section */
 .tech-stack {
   display: flex;
@@ -61,7 +63,7 @@ Fullscreen overlay
   padding: 6px 12px;
   border-radius: 8px;
   font-size: 14px;
-  color: #4f46e5;
+  color: #29b6f6 !important;
   font-weight: 500;
 }
 

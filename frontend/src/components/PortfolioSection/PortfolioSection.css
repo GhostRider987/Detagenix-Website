@@ -48,13 +48,13 @@
 }
 
 .filter-btn:hover {
-  border-color: #667eea;
-  color: #667eea;
+  border-color: #29b6f6;
+  color: #29b6f6;
   transform: translateY(-2px);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: #29b6f6;
   color: white;
   border-color: transparent;
 }
@@ -172,7 +172,7 @@
 }
 
 .tech-tag {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background-color: #29b6f6;;
   color: white;
   padding: 0.3rem 0.8rem;
   border-radius: 15px;
@@ -183,8 +183,8 @@
 /* View Project Button */
 .view-project-btn {
   background: transparent;
-  border: 2px solid #667eea;
-  color: #667eea;
+  border: 2px solid #29b6f6;
+  color: #29b6f6;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   font-weight: 600;
@@ -194,8 +194,8 @@
 }
 
 .view-project-btn:hover {
-  background: #667eea;
-  color: white;
+  background: #29b6f6;
+  color: white !important;
   transform: translateY(-2px);
 }
 

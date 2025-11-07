@@ -3,6 +3,9 @@ import "./Aboutus.css";
 import teamPhoto from "../../asset/Devops.png";
 
 function About() {
+     useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   useEffect(() => {
     const els = document.querySelectorAll(".fade-up");
 

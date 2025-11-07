@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import "./Contactus.css";
+import { useEffect } from "react";  
 
 function Contactus() {
+     useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const [formData, setFormData] = useState({
     name: "",
     email: "",

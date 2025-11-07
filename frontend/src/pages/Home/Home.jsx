@@ -3,13 +3,14 @@ import { useEffect, useState } from "react";
 import Testimonial from "../../components/Testimonial/Testimonial";
 
 import Techslider from "../../components/Techslider/Techslider";
-
+import { useNavigate } from "react-router-dom";
 import PortfolioSection from '../../components/PortfolioSection/PortfolioSection';
 import Services from "../../components/Servicessection/Services.jsx";
 import  servicesData  from "../../data/servicesData.js";
 
 const Home = () => {
   // Stats data for the highlights section
+  const navigate = useNavigate();
   const stats = [
     { icon: "💼", number: "8+", label: "Services" },
     { icon: "🎓", number: "50+", label: "Interns Trained" },
@@ -17,6 +18,9 @@ const Home = () => {
     { icon: "😊", number: "95%", label: "Client Satisfaction" },
     { icon: "🏆", number: "3+", label: "Years Experience" }
   ];
+   const goToAbout = () => {
+    navigate("/about"); // Redirects to About component
+  };
 
   return (
     <>
@@ -40,8 +44,8 @@ const Home = () => {
           <p>We build cutting-edge web solutions, AI applications, and cloud services that drive business growth</p>
 
           <div className="hero-buttons">
-            <button className="btn-primary">Get Started</button>
-            <button className="btn-secondary">View Our Work</button>
+            <button onClick={goToAbout} className="btn-primary">Get Started</button>
+            <button onClick={() => navigate("/projects")} className="btn-secondary">View Our Work</button>
           </div>
         </div>
       </section>

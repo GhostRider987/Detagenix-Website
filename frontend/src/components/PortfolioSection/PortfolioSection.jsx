@@ -13,7 +13,9 @@ const PortfolioSection = () => {
     { id: "all", name: "All Projects" },
     { id: "web", name: "Web Development" },
     { id: "mobile", name: "Mobile Apps" },
-    { id: "ai", name: "AI/ML" }
+    { id: "ai", name: "AI/ML" },
+    { id: "cybersecurity", name: "Cyber Security"},
+    { id: "blockchain", name: "Block Chain"},
   ];
 
   // ✅ Filter logic (unchanged)

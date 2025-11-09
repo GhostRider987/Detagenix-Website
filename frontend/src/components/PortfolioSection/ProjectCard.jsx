@@ -23,24 +23,6 @@ const ProjectCard = ({ project, onViewProject }) => {
           }}
         />
         <div className="project-overlay">
-          <div className="project-links">
-            <a
-              href={project.liveUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              🌐 Live Demo
-            </a>
-            <a
-              href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              💻 Code
-            </a>
-          </div>
         </div>
       </div>
 

@@ -62,7 +62,7 @@
 /* ✅ FIXED Responsive Grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 27vw 27vw 27vw;
   gap: 25px;
   margin-top: 30px;
   width: 100%;

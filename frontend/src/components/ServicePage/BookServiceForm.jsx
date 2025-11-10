@@ -1,26 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
+import "./BookServicesForm.css";
 
-const BookingServiceForm = () => {
-  const location = useLocation();
-  const preselectedServiceId = location.state?.serviceId || "";
-  const preselectedServiceName = location.state?.serviceName || "";
+const BookServiceForm = ({ serviceName, onClose }) => {
   const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-  const [services, setServices] = useState([]);
   const [form, setForm] = useState({
     name: "",
     email: "",
-    serviceType: preselectedServiceId,
+    service: serviceName || "",
   });
-  const [message, setMessage] = useState("");
-
-  useEffect(() => {
-    fetch(`${BASE_URL}/services`)
-      .then((res) => res.json())
-      .then((data) => setServices(data))
-      .catch((err) => console.error(err));
-  }, []);
+  const [status, setStatus] = useState(""); // success/error message
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -28,65 +19,72 @@ const BookingServiceForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setMessage("");
-    if (!form.name || !form.email || !form.serviceType) {
-      setMessage("Please fill all fields");
+    setStatus("");
+
+    if (!form.name || !form.email || !form.service) {
+      setStatus("Please fill all fields");
       return;
     }
 
     try {
+      setLoading(true);
       const res = await fetch(`${BASE_URL}/services/book`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
+
       const data = await res.json();
+
       if (!res.ok) throw new Error(data.message || "Booking failed");
 
-      setMessage("Service booked successfully!");
-      setForm({ name: "", email: "", serviceType: preselectedServiceId });
+      setStatus("✅ Service booked successfully!");
+      setForm({ name: "", email: "", service: serviceName });
     } catch (err) {
-      setMessage(err.message);
+      setStatus(`❌ ${err.message}`);
+    } finally {
+      setLoading(false);
     }
   };
 
-  return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Your Name"
-        value={form.name}
-        onChange={handleChange}
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Your Email"
-        value={form.email}
-        onChange={handleChange}
-      />
-      <select
-        name="serviceType"
-        value={form.serviceType}
-        onChange={handleChange}
-      >
-        <option value="">Select Service</option>
-        {preselectedServiceId && (
-          <option value={preselectedServiceId}>{preselectedServiceName}</option>
-        )}
-        {services
-          .filter((s) => s._id !== preselectedServiceId)
-          .map((s) => (
-            <option key={s._id} value={s._id}>
-              {s.name}
-            </option>
-          ))}
-      </select>
-      <button type="submit">Book Service</button>
-      {message && <p>{message}</p>}
-    </form>
+  return ReactDOM.createPortal(
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        <button className="close-btn" onClick={onClose}>×</button>
+
+        <h2>Book {serviceName}</h2>
+
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={form.name}
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={form.email}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
+            name="service"
+            value={form.service}
+            readOnly
+          />
+          <button type="submit" className="submit-btn" disabled={loading}>
+            {loading ? "Booking..." : "Submit"}
+          </button>
+        </form>
+
+        {status && <p className="status-message">{status}</p>}
+      </div>
+    </div>,
+    document.body
   );
 };
 
-export default BookingServiceForm;
+export default BookServiceForm;

@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
         website and services.
       </p>
 
-      <section>
+      <section className="privacy-section">
         <h2>1. Consent</h2>
         <p>
           By using our website, you consent to our Privacy Policy and agree to its terms. If you do not agree, please
@@ -23,7 +23,7 @@ const PrivacyPolicy = () => {
         </p>
       </section>
 
-      <section>
+      <section className="privacy-section">
         <h2>2. Information We Collect</h2>
         <p>
           We collect personal details such as your name, company name, email address, and phone number when you
@@ -32,7 +32,7 @@ const PrivacyPolicy = () => {
         </p>
       </section>
 
-      <section>
+      <section className="privacy-section">
         <h2>3. How We Use Your Information</h2>
         <ul>
           <li>To provide, operate, and improve our services</li>
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
         </ul>
       </section>
 
-      <section>
+      <section className="privacy-section">
         <h2>4. Data Protection Rights</h2>
         <p>You have the right to:</p>
         <ul>
@@ -58,7 +58,7 @@ const PrivacyPolicy = () => {
         </p>
       </section>
 
-      <section>
+      <section className="privacy-section">
         <h2>5. Cookies</h2>
         <p>
           Like most websites, we use cookies to enhance your browsing experience by remembering your preferences and
@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
         </p>
       </section>
 
-      <section>
+      <section className="privacy-section">
         <h2>6. Third-Party Services</h2>
         <p>
           We may use third-party tools such as Google Analytics to monitor site performance. These services may collect
@@ -74,7 +74,7 @@ const PrivacyPolicy = () => {
         </p>
       </section>
 
-      <section>
+      <section className="privacy-section">
         <h2>7. Children’s Privacy</h2>
         <p>
           We do not knowingly collect information from children under 13. If your child has shared personal data, please
@@ -82,7 +82,7 @@ const PrivacyPolicy = () => {
         </p>
       </section>
 
-      <section>
+      <section className="privacy-section">
         <h2>8. Updates to This Policy</h2>
         <p>
           We may update this Privacy Policy periodically. Changes will be posted on this page with an updated revision

@@ -11,6 +11,7 @@ import Contactus from "./pages/Contact/Contactus.jsx";
 import Aboutus from "./pages/About/Aboutus.jsx"; 
 import Careers from "./pages/career/Career.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy.jsx";
+import BookServiceForm from "./components/ServicePage/BookServiceForm.jsx";
 
 function App() {
   
@@ -20,7 +21,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Service />} />
+        <Route path="/book-service/:service" element={<BookServiceForm />} />
+
         <Route path="/projects" element={<Projectpage />} />
+        
         <Route path="/about" element={<Aboutus />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/blog" element={<BlogPage />} />

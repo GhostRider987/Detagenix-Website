@@ -53,7 +53,8 @@ const Home = () => {
         </div>
       </section>
        {/* ✅ PORTFOLIO SECTION */}
-      <PortfolioSection />
+      <PortfolioSection limit={6} />
+
 
 
       {/* ✅ SERVICES SECTION */}

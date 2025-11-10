@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 import { projectsData } from "../../data/projectsData";
 import ProjectModal from "./ProjectModal"; // ✅ Add this import
 import "./PortfolioSection.css";
 
-const PortfolioSection = () => {
+const PortfolioSection = ({ limit }) => {
   const [activeFilter, setActiveFilter] = useState("all");
-  const [selectedProject, setSelectedProject] = useState(null); // ✅ For modal
-  const [openModal, setOpenModal] = useState(false);            // ✅ For modal
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [openModal, setOpenModal] = useState(false);
 
   const categories = [
     { id: "all", name: "All Projects" },
@@ -18,19 +19,19 @@ const PortfolioSection = () => {
     { id: "blockchain", name: "Block Chain"},
   ];
 
-  // ✅ Filter logic (unchanged)
   const filteredProjects =
     activeFilter === "all"
       ? projectsData
       : projectsData.filter((project) => project.category === activeFilter);
 
-  // ✅ Open Modal
+  // Apply limit if provided
+  const projectsToDisplay = limit ? filteredProjects.slice(0, limit) : filteredProjects;
+
   const handleViewProject = (project) => {
     setSelectedProject(project);
     setOpenModal(true);
   };
 
-  // ✅ Close Modal
   const closeModal = () => {
     setOpenModal(false);
     setSelectedProject(null);
@@ -44,7 +45,6 @@ const PortfolioSection = () => {
           <p>Check out our latest work and success stories</p>
         </div>
 
-        {/* Filter Buttons */}
         <div className="portfolio-filters">
           {categories.map((category) => (
             <button
@@ -57,19 +57,25 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Projects Grid */}
         <div className="projects-grid">
-          {filteredProjects.map((project) => (
+          {projectsToDisplay.map((project) => (
             <ProjectCard
               key={project.id}
               project={project}
-              onViewProject={handleViewProject}   // ✅ FIXED
+              onViewProject={handleViewProject}
             />
           ))}
         </div>
+        <div className="portfolio-cta">
+  {limit && (
+    <Link to="/projects" className="btn-secondary">
+      See All Projects → 
+    </Link>
+  )}
+</div>
+
       </div>
 
-      {/* ✅ Project Modal */}
       {openModal && selectedProject && (
         <ProjectModal
           project={selectedProject}
@@ -79,5 +85,4 @@ const PortfolioSection = () => {
     </section>
   );
 };
-
 export default PortfolioSection;

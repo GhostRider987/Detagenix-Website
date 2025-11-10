@@ -27,15 +27,15 @@ const Navbar = () => {
 
         {/* Menu */}
         <ul className={`nav-menu ${isOpen ? "open" : ""}`}>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/about">About</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/projects">Projects</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
-          <li><Link to="/careers">Careers</Link></li>
-          <li><Link to="/contact">Contact Us</Link></li>
-          <li><Link to="/policy">Privacy Policy</Link></li>
-        </ul>
+  <li><Link to="/" onClick={() => setIsOpen(false)}>Home</Link></li>
+  <li><Link to="/about" onClick={() => setIsOpen(false)}>About</Link></li>
+  <li><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
+  <li><Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li>
+  <li><Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link></li>
+  <li><Link to="/careers" onClick={() => setIsOpen(false)}>Careers</Link></li>
+  <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
+  <li><Link to="/policy" onClick={() => setIsOpen(false)}>Privacy Policy</Link></li>
+</ul>
         <div className="nav-auth"> <Link to="/login" className="user-btn"> <img src={avatar} alt="User" className="user-icon" /> </Link> </div>
 
       </div>

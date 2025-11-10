@@ -76,6 +76,9 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
   border: 1px solid #f1f5f9;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card:hover {
@@ -217,7 +220,17 @@
   background: #667eea;
   color: white;
 }
-
+.portfolio-cta{
+  margin-top: 2rem;
+}
+.portfolio-cta a{
+  color: #29b6f6 !important;;
+  text-decoration: none;
+}
+.portfolio-cta a:hover{
+  
+  text-decoration: none;
+}
 /* ✅ Mobile Responsive */
 @media (max-width: 768px) {
   .portfolio-section {

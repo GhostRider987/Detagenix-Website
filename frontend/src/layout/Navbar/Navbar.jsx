@@ -36,7 +36,7 @@ const Navbar = () => {
   <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact Us</Link></li>
   <li><Link to="/policy" onClick={() => setIsOpen(false)}>Privacy Policy</Link></li>
 </ul>
-        <div className="nav-auth"> <Link to="/login" className="user-btn"> <img src={avatar} alt="User" className="user-icon" /> </Link> </div>
+        {/* <div className="nav-auth"> <Link to="/login" className="user-btn"> <img src={avatar} alt="User" className="user-icon" /> </Link> </div> */}
 
       </div>
     </nav>

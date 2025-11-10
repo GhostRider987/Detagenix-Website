@@ -10,7 +10,7 @@ const PrivacyPolicy = () => {
     <div className="privacy-container">
       <h1>Privacy Policy</h1>
       <p className="intro">
-        At <strong>FastCadCoding</strong>, we value your privacy and are committed to protecting your personal
+        At <strong>DETAGenix</strong>, we value your privacy and are committed to protecting your personal
         information. This Privacy Policy explains how we collect, use, and safeguard your data when you use our
         website and services.
       </p>
@@ -54,7 +54,7 @@ const PrivacyPolicy = () => {
         </ul>
         <p>
           To exercise these rights, contact us at{" "}
-          <a href="mailto:fcc@fastcadcoding.in">fcc@fastcadcoding.in</a>.
+          <a href="mailto:contact@detagenix.com">contact@detagenix.com</a>.
         </p>
       </section>
 
@@ -92,7 +92,7 @@ const PrivacyPolicy = () => {
 
       <p className="contact">
         For any questions regarding our Privacy Policy, please email us at{" "}
-        <a href="mailto:fcc@fastcadcoding.in">fcc@fastcadcoding.in</a>.
+        <a href="mailto:contact@detagenix.com">contact@detagenix.com</a>.
       </p>
     </div>
   );

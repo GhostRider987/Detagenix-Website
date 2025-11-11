@@ -12,6 +12,8 @@ import Aboutus from "./pages/About/Aboutus.jsx";
 import Careers from "./pages/career/Career.jsx";
 import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy.jsx";
 import BookServiceForm from "./components/ServicePage/BookServiceForm.jsx";
+import Technology from "./pages/Technology/Technology.jsx";
+import Industry from "./pages/Industry/Industries.jsx";
 
 function App() {
   
@@ -24,7 +26,8 @@ function App() {
         <Route path="/book-service/:service" element={<BookServiceForm />} />
 
         <Route path="/projects" element={<Projectpage />} />
-        
+        <Route path="/technology" element={<Technology />} />
+        <Route path="/industries" element={<Industry />} />
         <Route path="/about" element={<Aboutus />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/blog" element={<BlogPage />} />

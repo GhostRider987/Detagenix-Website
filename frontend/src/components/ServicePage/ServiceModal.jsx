@@ -21,9 +21,7 @@ const ServiceModal = ({ service, onClose, openForm }) => {
           ))}
         </div>
 
-        <button className="book-btn" onClick={openForm}>
-          Book Service
-        </button>
+       
       </div>
     </div>
   );

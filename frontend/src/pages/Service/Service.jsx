@@ -10,7 +10,10 @@ const Service = () => {
   const [selectedService, setSelectedService] = useState(null);
   const [openDetail, setOpenDetail] = useState(false);
   const [openForm, setOpenForm] = useState(false);
-
+const openFormModal = () => {
+  setSelectedService(null);  // Not selecting any service
+  setOpenForm(true);
+};
   // ✅ OPEN MODAL
   const openModal = (service) => {
     console.log("Opening modal for:", service); // ✅ Debug
@@ -48,6 +51,10 @@ const Service = () => {
           />
         ))}
       </div>
+      <button className="book-btn" onClick={openFormModal}>
+  Book Demo
+</button>
+
 
       {/* ✅ MODAL SHOWING WHEN CLICKED */}
       {openDetail && selectedService && (

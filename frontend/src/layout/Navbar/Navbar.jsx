@@ -31,7 +31,7 @@ const Navbar = () => {
   <li><Link to="/about" onClick={() => setIsOpen(false)}>About Us</Link></li>
   <li><Link to="/services" onClick={() => setIsOpen(false)}>Services</Link></li>
   <li><Link to="/industries" onClick={() => setIsOpen(false)}>Industries</Link></li>
-  <li><Link to="/technnology" onClick={() => setIsOpen(false)}>Technologies</Link></li>
+  <li><Link to="/technology" onClick={() => setIsOpen(false)}>Technologies</Link></li>
   {/* <li><Link to="/projects" onClick={() => setIsOpen(false)}>Projects</Link></li> */}
   <li><Link to="/blog" onClick={() => setIsOpen(false)}>Blog</Link></li>
   <li><Link to="/careers" onClick={() => setIsOpen(false)}>Careers</Link></li>

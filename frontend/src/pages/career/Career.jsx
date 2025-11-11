@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Career.css";
 
 function Careers() {
+  
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -227,6 +228,7 @@ function Careers() {
 
   return (
     <main className="careers-page">
+        
       <header className="care-hero care-fade">
         <div className="container">
           <h1 className="section-title">Careers & Internships</h1>

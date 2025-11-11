@@ -17,7 +17,7 @@ const Services = ({ service, title, desc, icon, link, onLearnMore }) => {
       };
 
   return (
-    <div className="service-card">
+    <div className="service-card page-card">
   <div className="service-card-content">
     <img src={cardData.icon} alt={cardData.title} className="icon" />
     <h3>{cardData.title}</h3>

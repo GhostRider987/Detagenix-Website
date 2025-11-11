@@ -20,6 +20,7 @@ const BookServiceForm = ({ serviceName, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("");
+    
 
     if (!form.name || !form.email || !form.service) {
       setStatus("Please fill all fields");
@@ -39,7 +40,7 @@ const BookServiceForm = ({ serviceName, onClose }) => {
       if (!res.ok) throw new Error(data.message || "Booking failed");
 
       setStatus("✅ Service booked successfully!");
-      setForm({ name: "", email: "", service: serviceName });
+      setForm({ name: "", email: "", service: "" });
     } catch (err) {
       setStatus(`❌ ${err.message}`);
     } finally {
@@ -72,8 +73,9 @@ const BookServiceForm = ({ serviceName, onClose }) => {
           <input
             type="text"
             name="service"
+            placeholder="Your Requirements"
             value={form.service}
-            readOnly
+            onChange={handleChange}
           />
           <button type="submit" className="submit-btn" disabled={loading}>
             {loading ? "Booking..." : "Submit"}

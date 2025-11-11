@@ -1,211 +1,237 @@
-/* =========================================================
-   ✅ FOOTER (Professional + Fully Responsive)
-   ========================================================= */
 .footer {
-  background: #0c1b3d;
-  color: #fff;
-  padding: 60px 0 20px 0;
-  margin-top: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 50px 20px;
 }
 
 .footer-container {
+  max-width: 1250px;
+  margin: auto;
+  display: flex;
+  
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* LEFT SIDE — CONTACT FORM */
+.footer-left {
+  width: 40%;
+
+}
+
+.contact-form-dark {
+  background: #1e293b;
+  padding: 25px;
+  
+  border-radius: 10px;
+}
+
+.form-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-control {
   width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr) ;
-  gap: 60px;
-
-  padding: 0 20px;   
-  box-sizing: border-box;
+  margin-bottom: 15px;
+  background: #0f172a;
+  color: white;
+  border: 1px solid #334155;
+  padding: 10px;
+  border-radius: 6px;
 }
 
-
-
-/* Footer Section */
-.footer-section h3,
-.footer-section h4 {
-  color: #4fc3f7;
-  margin-bottom: 18px;
-  font-size: 1.6rem;
+.form-control::placeholder {
+  color: #b7b9bb!important;
 }
 
-.footer-section p {
-  font-size: 1rem;
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-.footer-section ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-section ul li {
-  margin: 8px 0;
-  opacity: 0.8;
-  transition: 0.3s ease;
-  font-size: 1rem;
-  cursor: pointer;
+.btn-primary {
+  width: 90%;
+  padding: 10px;
+  background: #3b82f6!important;
+  border: none;
+  border-radius: 6px;
+  color: white!important;
   
 }
-.footer-section ul li a {
-  text-decoration: none !important;
-  color: inherit !important;
- 
 
+.btn-primary:hover {
+  background: #2563eb!important;
 }
 
-
-.footer-section ul li:hover {
-  opacity: 1;
-  transform: translateX(4px);
-  color: #4fc3f7;
+/* RIGHT SIDE */
+.footer-right {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  
+  gap: 4rem;
 }
 
-/* Footer Headings large look */
-.footer h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  opacity: 0.9;
+/* Top branding */
+.footer-brand h2 {
+  text-align: center;
+  color:#00bfff;
+  font-size: 4rem;
+  margin-bottom: 10px;
 }
 
-.footer p {
-  font-size: 1.1rem;
-  opacity: 0.85;
+.footer-brand p {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #cbd5e1;
 }
 
-/* Copyright */
+/* Bottom links + contact */
+.footer-links-contact {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+/* Quick links */
+.quick-links ul,
+.footer-section ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+.quick-links ul li {
+  margin-bottom: 10px;
+}
+
+.quick-links ul li a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.quick-links ul li a:hover {
+  color: #60a5fa;
+}
+
+.footer-icon {
+  margin-right: 8px;
+  color: #60a5fa;
+}
+
+/* Social Icons */
+.footer-social a {
+  margin-right: 10px;
+  color: #60a5fa;
+  font-size: 30px;
+}
+
 .footer-bottom {
   text-align: center;
-  margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  opacity: 0.7;
-  font-size: 0.9rem;
-}
-.footer-icon {
-  margin-right: 10px;
-  font-size: 1.1rem;
-  color: #4fc3f7;
+  margin-top: 35px;
+  color: #94a3b8;
+  border-top: 1px solid #1e293b;
 }
 
-.footer-social {
-  display: flex;
-  gap: 18px;
-  margin-top: 15px;
-}
-
-.footer-social a {
-  font-size: 1.7rem;
-  color: #4fc3f7;
-  transition: 0.3s ease;
-}
-
-.footer-social a:hover {
-  color: #ffffff;
-  transform: translateY(-3px);
-}
-
-
-/* =========================================================
-   ✅ RESPONSIVE (TABLETS + MOBILE)
-   ========================================================= */
-
-/* =========================================================
-   ✅ MINIMAL FOOTER FOR MOBILE (<768px)
-   ========================================================= */
+/* ✅ RESPONSIVE */
 @media (max-width: 768px) {
 
-  .footer {
-    padding: 35px 0 10px 0;
-  }
-
+  /* Stack vertically on mobile */
   .footer-container {
-    grid-template-columns: 1fr;
-    text-align: center;
-    gap: 25px;                   /* smaller gap */
-    padding: 0 10px;             /* less left/right padding */
-  }
-
-  .footer-section h3,
-  .footer-section h4 {
-    font-size: 1.2rem;           /* smaller headings */
-    margin-bottom: 10px;
-  }
-
-  .footer-section p {
-    font-size: 0.9rem;
-    line-height: 1.4;
-    opacity: 0.75;
-  }
-  .footer-section.quick-links ul {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 18px;          /* spacing between menu items */
-    flex-wrap: wrap;    /* allows wrapping if too long */
+    flex-direction: column;
+    gap: 35px;
   }
 
-  .footer-section ul li {
-    font-size: 0.9rem;           /* smaller text */
-    margin: 6px 0;
-    transform: none !important;  /* minimal look */
+  /* Form comes first */
+  
+
+  /* Make all full width on mobile */
+  .footer-left,
+  .footer-right,
+  .footer-brand,
+  .footer-links-contact {
+    width: 100%;
   }
 
-  .footer-section ul li:hover {
-    transform: none;             /* remove slide effect */
-  }
-
-  /* Icons smaller & centered */
-  .footer-social {
-    justify-content: center;
-    gap: 14px;
+  /* Fix spacing */
+  .footer-brand h2 {
     margin-top: 10px;
+    font-size: 24px;
   }
 
-  .footer-social a {
-    font-size: 1.3rem;           /* reduce icon size */
+  .footer-brand p {
+    font-size: 15px;
   }
 
-  .footer-icon {
-    font-size: 1rem;             /* smaller icons */
-    margin-right: 8px;
+  .footer-links-contact {
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (max-width: 768px) {
+
+  /* Stack vertically on mobile */
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
   }
 
-  /* Copyright minimal */
-  .footer-bottom {
-    font-size: 0.7rem;
-    margin-top: 25px;
-    padding-top: 10px;
+  /* Form comes first */
+  
+
+  /* Make all full width on mobile */
+  .footer-left,
+  .footer-right,
+  .footer-brand,
+  .footer-links-contact {
+    width: 100%;
+  }
+
+  /* Fix spacing */
+  .footer-brand h2 {
+    margin-top: 10px;
+    font-size: 24px;
+  }
+
+  .footer-brand p {
+    font-size: 15px;
+  }
+
+  .footer-links-contact {
+    gap: 25px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+  }
+  /* ✅ QUICK LINKS + CONTACT IN SAME LINE (2 columns on mobile) */
+@media (max-width: 768px) {
+
+  /* Make the bottom section a 2-column grid */
+  .footer-links-contact {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 20px !important;
+    align-items: start;
+  }
+
+  /* Individual boxes should not stretch full width */
+  .footer-section,
+  .quick-links {
+    width: 100%;
+  }
+
+  /* Reduce text size for mobile */
+  .footer-section h4,
+  .quick-links h4 {
+    font-size: 17px;
+  }
+
+  .footer-section ul li,
+  .quick-links ul li {
+    font-size: 12px;
   }
 }
 
-/* =========================================================
-   ✅ VERY SMALL SCREENS (<480px)
-   ========================================================= */
-@media (max-width: 480px) {
-
-  .footer {
-    padding: 30px 0 10px 0;
-  }
-
-  .footer-section h3,
-  .footer-section h4 {
-    font-size: 1.1rem;
-  }
-
-  .footer-section ul li {
-    font-size: 0.85rem;
-  }
-
-  .footer-social a {
-    font-size: 1.15rem;
-  }
-
-  .footer-bottom {
-    font-size: 0.65rem;
-  }
-}
+}}

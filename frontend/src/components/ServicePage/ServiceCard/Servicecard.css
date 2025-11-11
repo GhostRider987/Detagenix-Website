@@ -6,7 +6,7 @@
 /* ✅ Desktop: exactly 2 columns */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ✅ NOW THREE CARDS */
+  grid-template-columns: repeat(2, 1fr); /* ✅ NOW THREE CARDS */
   gap: 1rem;
   max-width: 1200px;  /* ✅ allows 3 cards to fit */
   margin: auto;
@@ -119,6 +119,7 @@
 @media (max-width: 480px) {
   .service-card {
     padding: 18px;
+    
   }
 
   .learn-more {

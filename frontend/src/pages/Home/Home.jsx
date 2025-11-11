@@ -10,7 +10,9 @@ import  servicesData  from "../../data/servicesData.js";
 import aboutusImage from "../../asset/culture2.png"; 
 import About from "../About/Aboutus.jsx";
 
+
 const Home = () => {
+  
   useEffect(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }, []);
@@ -32,6 +34,7 @@ const Home = () => {
 
   return (
     <>
+    
       {/* ✅ HERO SECTION */}
       <section className="hero-video-section">
         <video 

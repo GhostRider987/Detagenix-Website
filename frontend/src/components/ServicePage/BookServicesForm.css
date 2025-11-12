@@ -7,6 +7,7 @@
   background: rgba(15,23,42,0.8);
   display: flex;
   justify-content: center;
+  
   align-items: center;
   z-index: 10000;
   animation: fadeIn 0.3s ease;
@@ -15,8 +16,9 @@
 .modal-content {
   background: #fff;
   padding: 2rem!important;
-  height: 60%;
+  height: 80%;
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   border-radius: 12px;
   width: 90%;
@@ -41,7 +43,7 @@
   font-weight: bold;
 }
 
-input, textarea {
+input, textarea ,select {
   width: 100%;
   padding: 0.8rem;
   margin: 1rem 0;
@@ -96,4 +98,58 @@ textarea:focus {
 @keyframes slideIn {
   from {transform: translateY(-20px);}
   to {transform: translateY(0);}
+}
+/* Default style for desktop & tablet */
+select[name="technology"] {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 10px 0 15px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  appearance: none; /* hides default arrow (for custom arrow if needed) */
+}
+
+/* Add a small dropdown arrow */
+select[name="technology"] {
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 18px;
+}
+
+/* Hover & Focus effect */
+select[name="technology"]:hover,
+select[name="technology"]:focus {
+  border-color: #29b6f6;
+  box-shadow: 0 0 6px rgba(79, 70, 229, 0.3);
+  background-color: #fff;
+}
+
+/* Option styling */
+select[name="technology"] option {
+  background-color: #fff;
+  color: #333;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  select[name="technology"] {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  select[name="technology"] {
+    font-size: 14px;
+    padding: 9px 10px;
+    border-radius: 6px;
+  }
 }

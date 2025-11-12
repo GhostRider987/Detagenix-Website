@@ -11,14 +11,16 @@ import {
   FaLock,
   FaLink,
   FaRobot,
+  FaJava,
+  FaPython,
 } from "react-icons/fa";
 
-const Technology = () => {
+const Technologies = () => {
   const [activeCategory, setActiveCategory] = useState("genai");
 
   const techCategories = [
     { id: "genai", name: "Generative AI" },
-    { id: "mern", name: "MERN Stack" },
+    { id: "fullstack", name: "Full Stack Development" },
     { id: "ai", name: "AI & ML" },
     { id: "cloud", name: "Cloud & DevOps" },
     { id: "data", name: "Data Modeling" },
@@ -26,15 +28,14 @@ const Technology = () => {
     { id: "cybersecurity", name: "Cybersecurity & QA" },
   ];
 
-  
   const categoryInfo = {
     genai: {
       title: "Generative AI",
       desc: "At Detagenix, we harness the power of Generative AI to create intelligent systems capable of learning, adapting, and generating content autonomously. From large language models to advanced neural networks, our AI solutions transform data into innovation — driving automation, efficiency, and creativity across industries.",
     },
-    mern: {
-      title: "MERN Stack",
-      desc: "The MERN Stack (MongoDB, Express.js, React.js, and Node.js) enables us to create fast, reliable, and scalable web applications. It’s our foundation for building dynamic user experiences and high-performance full-stack solutions.",
+    fullstack: {
+      title: "Full Stack Development",
+      desc: "We build robust, scalable, and high-performing web applications using modern front-end and back-end technologies. From UI design to database management, our full stack solutions ensure seamless user experiences, secure APIs, and optimized server performance using frameworks like React, Node.js, Java, and Python.",
     },
     ai: {
       title: "Artificial Intelligence & Machine Learning",
@@ -58,7 +59,6 @@ const Technology = () => {
     },
   };
 
-  
   const techStacks = [
     // Generative AI
     {
@@ -80,30 +80,48 @@ const Technology = () => {
       icon: <FaBrain className="tech-icon" />,
     },
 
-    // MERN
+    // Full Stack Development
     {
-      category: "mern",
+      category: "fullstack",
       title: "React.js",
-      desc: "Front-end library for building fast, interactive UIs.",
+      desc: "A powerful front-end library for building dynamic, responsive, and reusable UI components.",
       icon: <FaReact className="tech-icon" />,
     },
     {
-      category: "mern",
+      category: "fullstack",
       title: "Node.js",
-      desc: "High-performance runtime for scalable backend services.",
+      desc: "A fast, event-driven runtime for building scalable and efficient server-side applications.",
       icon: <FaNodeJs className="tech-icon" />,
     },
     {
-      category: "mern",
+      category: "fullstack",
       title: "Express.js",
-      desc: "Lightweight server framework for REST APIs.",
+      desc: "A minimal and flexible Node.js web framework for building APIs and backend services effortlessly.",
       icon: <FaDatabase className="tech-icon" />,
     },
     {
-      category: "mern",
+      category: "fullstack",
       title: "MongoDB",
-      desc: "Flexible NoSQL database for high-volume data handling.",
+      desc: "A flexible NoSQL database designed for handling unstructured and semi-structured data efficiently.",
       icon: <FaDatabase className="tech-icon" />,
+    },
+    {
+      category: "fullstack",
+      title: "SQL (MySQL / PostgreSQL)",
+      desc: "Structured query databases for reliable data storage, relationships, and transaction management.",
+      icon: <FaDatabase className="tech-icon" />,
+    },
+    {
+      category: "fullstack",
+      title: "Java",
+      desc: "Develop enterprise-grade, secure, and scalable back-end applications using Java and Spring Boot.",
+      icon: <FaJava className="tech-icon" />,
+    },
+    {
+      category: "fullstack",
+      title: "Python",
+      desc: "Build robust and fast APIs using frameworks like Django and Flask for data-intensive applications.",
+      icon: <FaPython className="tech-icon" />,
     },
 
     // AI
@@ -182,7 +200,6 @@ const Technology = () => {
       ? techStacks.filter((tech) => tech.category === "genai")
       : techStacks.filter((tech) => tech.category === activeCategory);
 
-  
   useEffect(() => {
     const els = document.querySelectorAll(".fade-up");
     const observer = new IntersectionObserver(
@@ -203,7 +220,6 @@ const Technology = () => {
 
   return (
     <div className="tech-page">
-      {/* Header */}
       <div className="container text-center fade-up">
         <h1 className="section-title">Technologies We Work With</h1>
         <p className="lead">
@@ -213,7 +229,6 @@ const Technology = () => {
         </p>
       </div>
 
-     
       <div className="tech-filter-section fade-up">
         {techCategories.map((category) => (
           <button
@@ -228,7 +243,6 @@ const Technology = () => {
         ))}
       </div>
 
-      
       {categoryInfo[activeCategory] && (
         <div className="tech-category-desc fade-up container text-center">
           <h2>{categoryInfo[activeCategory].title}</h2>
@@ -236,7 +250,6 @@ const Technology = () => {
         </div>
       )}
 
-    
       <div className="tech-grid fade-up">
         {filteredTechs.map((tech, index) => (
           <div className="tech-card" key={index}>
@@ -250,4 +263,4 @@ const Technology = () => {
   );
 };
 
-export default Technology;
+export default Technologies;

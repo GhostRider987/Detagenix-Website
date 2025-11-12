@@ -14,12 +14,13 @@ import PrivacyPolicy from "./components/PrivacyPolicy/PrivacyPolicy.jsx";
 import BookServiceForm from "./components/ServicePage/BookServiceForm.jsx";
 import Technology from "./pages/Technology/Technology.jsx";
 import Industry from "./pages/Industry/Industries.jsx";
-
+import ChatBot from "./components/Chatbot/Chatbot.jsx";
 function App() {
   
   return (
     <>
       <Navbar />
+      <ChatBot />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Service />} />

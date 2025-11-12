@@ -108,15 +108,41 @@
 
 /* Responsive Design */
 /* ✅ MOBILE: turn slider into a swipeable carousel */
-@media (max-width: 768px) {
+/* Hide hint by default */
+.swipe-hint {
+  display: none;
+}
 
+/* Tech Slider Styles */
+.tech-slider-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 40vh;
+  width: 100%;
+}
+
+/* ... your other styles ... */
+
+/* ✅ MOBILE: turn slider into a swipeable carousel */
+@media (max-width: 768px) {
   .slider-container {
     overflow-x: auto;
+    width: 100%;
+    max-width: 1200px;
+    height: 40vh;
+    text-align: center;
   }
 
   .slider-track {
     animation: none;
     display: flex;
+    align-items: center;
+    text-align: center;
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -125,13 +151,43 @@
   .slide {
     scroll-snap-align: center;
     flex-shrink: 0;
-    min-width: 260px;
+    width: 400px;
+  }
+
+  .tech-slider-container h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    color: #00bfff;
+    font-size: 2.5rem;
+  }
+
+  .tech-name {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .tech-desc {
+    font-size: 0.7rem;
+    text-align: center;
+  }
+
+  /* ✅ Now visible on mobile */
+  .swipe-hint {
+    display: block;
+    font-size: 0.9rem;
+    color: #00bfff;
+    text-align: center;
+    margin-bottom: 10px;
+    opacity: 0.8;
+    animation: hint-blink 1.5s ease-in-out infinite;
+  }
+
+  @keyframes hint-blink {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
   }
 }
 
-/* ✅ EXTRA SMALL (phones) */
-@media (max-width: 768px) {
-  .tech-slider-container{
-    display: none !important;
-  }
-}
+
+

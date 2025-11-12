@@ -4,13 +4,13 @@
 }
 
 /* ✅ Desktop: exactly 2 columns */
-.services-grid {
+/* .services-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* ✅ NOW THREE CARDS */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 1rem;
-  max-width: 1200px;  /* ✅ allows 3 cards to fit */
+  max-width: 1200px;  
   margin: auto;
-}
+} */
 
 
 .service-card {
@@ -26,7 +26,7 @@
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   text-align: center;
   transition: all 0.3s ease;
-  height: 100%; /* ✅ make all cards same height in grid */
+  /* height: 550px; ✅ make all cards same height in grid */
 }
 .service-card-content h3{
     font-size: 2.2rem;
@@ -40,7 +40,7 @@
 }
 .service-card img {
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   object-fit: cover;         
   border-radius: 12px;
   margin-bottom: 15px;
@@ -99,7 +99,7 @@
 
   /* ✅ Switch to 1 column */
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     max-width: 100%;
     gap: 1.2rem;
   }
@@ -107,8 +107,21 @@
   /* ✅ Reduce card padding on mobile */
   .service-card {
     padding: 20px;
+    height: 300px;
   }
-
+  .service-card img {
+  width: 50%;
+  height: 7rem;
+  object-fit: cover;         
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.service-card-content h3{
+    font-size: 1.8rem;
+    padding-bottom: 1rem;
+}.service-card-content p{
+    font-size: 0.9rem;
+}
   /* ✅ Image adjusts better on small screens */
   /* .service-card img {
     width: 85%;

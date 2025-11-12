@@ -100,7 +100,7 @@ const Home = () => {
       <section className="services-section">
       <h1>Our Services</h1>
 
-      <div className="services-grid">
+      <div className="service-grids">
         {servicesData.map((service, index) => (
           <Services 
             key={index}
@@ -116,16 +116,20 @@ const Home = () => {
      
       {/* ✅ HIGHLIGHTS/STATS SECTION */}
       <section className="stats-bar">
-        <div className="stats-container">
-          {stats.map((stat, index) => (
-            <div key={index} className="stat-item">
-              <div className="stat-icon">{stat.icon}</div>
-              <div className="stat-number">{stat.number}</div>
-              <div className="stat-label">{stat.label}</div>
-            </div>
-          ))}
+        <h1>Numbers That Define Us</h1>
+  <div className="stats-slider">
+    <div className="stats-track">
+      {[...stats, ...stats].map((stat, index) => ( // duplicate for infinite loop
+        <div key={index} className="stat-item">
+          <div className="stat-icon">{stat.icon}</div>
+          <div className="stat-number">{stat.number}</div>
+          <div className="stat-label">{stat.label}</div>
         </div>
-      </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       
 

@@ -1,6 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./Industries.css";
-// import CyberImage from "../assets/images/industries/cybersecurity.jpg";
+import CyberImage from "../../asset/industries/cybersecurity.jpg";
+import ecommerceImage from "../../asset/industries/ecommerce.jpg";
+import edtechImage from "../../asset/industries/edtech.jpg";
+import energyImage from "../../asset/industries/energy.jpg";
+import financeImage from "../../asset/industries/finance.jpg"; 
+import governanceImage from "../../asset/industries/governance.jpg";  
+import healthcareImage from "../../asset/industries/healthcare.jpg";
+import legalImage from "../../asset/industries/legal.jpg";
+import manufacturingImage from "../../asset/industries/manufacturing.jpg";
+import realestateImage from "../../asset/industries/realestate.webp";
+import telecomImage from "../../asset/industries/telecom.jpg";
+import transportImage from "../../asset/industries/transport.jpg";  
+
+
 import {
   FaLock,
   FaShoppingCart,
@@ -38,7 +51,7 @@ const Industries= () => {
     cybersecurity: {
       title: "Cybersecurity",
       desc: "Protecting digital ecosystems through AI-driven threat detection, secure infrastructure, and end-to-end encryption. We help enterprises mitigate risk, ensure compliance, and safeguard their digital presence.",
-    //   image: CyberImage,
+      image: CyberImage,
       subSections: [
         { title: "Threat Intelligence", desc: "Our advanced monitoring systems identify and neutralize potential cyber threats in real-time, ensuring uninterrupted operations and robust protection for mission-critical systems." },
         { title: "Data Protection", desc: "We implement industry-leading encryption, zero-trust architectures, and identity management to ensure sensitive data remains secure across networks, devices, and cloud environments." },
@@ -48,7 +61,7 @@ const Industries= () => {
     ecommerce: {
       title: "E-Commerce & Retail",
       desc: "Empowering online retail businesses with scalable web platforms, seamless payment systems, and intelligent customer experiences. We help brands optimize conversion and retention through data-driven solutions.",
-      image: "/assets/images/industries/ecommerce.jpg",
+      image: ecommerceImage,
       subSections: [
         { title: "Smart Storefronts", desc: "We build responsive, intuitive, and SEO-friendly storefronts that enhance product discoverability, drive engagement, and boost customer satisfaction across all devices." },
         { title: "Payment Integration", desc: "Integrating multiple payment gateways with advanced fraud detection ensures smooth, secure transactions and builds trust with your global customers." },
@@ -58,7 +71,7 @@ const Industries= () => {
     edtech: {
       title: "EdTech",
       desc: "Transforming education through technology that enhances engagement, accessibility, and learning outcomes. Our solutions support institutions, tutors, and learners globally.",
-      image: "/assets/images/industries/edtech.jpg",
+      image: edtechImage,
       subSections: [
         { title: "LMS Development", desc: "We design robust Learning Management Systems that allow seamless course delivery, student tracking, and performance analytics for schools, universities, and corporates." },
         { title: "Gamified Learning", desc: "Our interactive, game-based modules enhance engagement and motivation, ensuring learners grasp concepts faster and retain information longer." },
@@ -68,7 +81,7 @@ const Industries= () => {
     energy: {
       title: "Energy & Utility",
       desc: "Driving digital transformation in energy with IoT, predictive analytics, and automation to ensure efficiency and sustainability.",
-      image: "/assets/images/industries/energy.jpg",
+      image: energyImage,
       subSections: [
         { title: "Smart Grid Systems", desc: "Our IoT-enabled grids enable real-time monitoring and predictive maintenance, minimizing downtime and improving power distribution efficiency." },
         { title: "Energy Analytics", desc: "We harness data analytics to track energy usage, detect inefficiencies, and optimize consumption to reduce operational costs and waste." },
@@ -78,7 +91,7 @@ const Industries= () => {
     finance: {
       title: "Finance & Banking",
       desc: "Revolutionizing the financial sector with AI, blockchain, and digital banking solutions that ensure transparency, compliance, and customer trust.",
-      image: "/assets/images/industries/finance.jpg",
+      image: financeImage,
       subSections: [
         { title: "FinTech Apps", desc: "We build secure, user-friendly financial applications for payments, lending, and investment management to enhance customer accessibility." },
         { title: "Blockchain Banking", desc: "Implement blockchain-powered systems that bring transparency and traceability to financial transactions while minimizing fraud risk." },
@@ -88,7 +101,7 @@ const Industries= () => {
     governance: {
       title: "Governance",
       desc: "Building smarter governance through digital transparency, data management, and secure citizen engagement systems.",
-      image: "/assets/images/industries/governance.jpg",
+      image: governanceImage,
       subSections: [
         { title: "E-Governance Platforms", desc: "We create scalable digital platforms that connect citizens and governments, improving access to public services and policy transparency." },
         { title: "Policy Management", desc: "AI-driven decision systems help governments analyze social and economic data to develop efficient, data-backed policy solutions." },
@@ -98,7 +111,7 @@ const Industries= () => {
     healthcare: {
       title: "Healthcare",
       desc: "Empowering healthcare providers with secure, interoperable, and AI-driven solutions for better patient outcomes.",
-      image: "/assets/images/industries/healthcare.jpg",
+      image: healthcareImage,
       subSections: [
         { title: "EHR Systems", desc: "We design interoperable Electronic Health Records that centralize patient data securely, improving care coordination and accessibility." },
         { title: "Telemedicine", desc: "Our telehealth platforms allow remote consultations, prescriptions, and diagnostics, expanding healthcare reach to underserved regions." },
@@ -108,7 +121,7 @@ const Industries= () => {
     legal: {
       title: "Legal & Professional Services",
       desc: "Transforming law firms and consultancies with digital case management, document automation, and analytics tools.",
-      image: "/assets/images/industries/legal.jpg",
+      image:  legalImage,
       subSections: [
         { title: "Legal Tech Apps", desc: "Digitize your legal operations with platforms that simplify document access, task tracking, and client interactions securely." },
         { title: "Document Automation", desc: "Automate complex legal documentation to eliminate manual errors, increase speed, and enhance client satisfaction." },
@@ -118,7 +131,7 @@ const Industries= () => {
     manufacturing: {
       title: "Manufacturing",
       desc: "Modernizing factories through Industry 4.0 solutions — IoT, robotics, and predictive maintenance for smarter production lines.",
-      image: "/assets/images/industries/manufacturing.jpg",
+      image: manufacturingImage,
       subSections: [
         { title: "IoT Automation", desc: "We implement intelligent automation systems with real-time sensors to enhance precision, reduce downtime, and improve productivity." },
         { title: "Supply Chain Analytics", desc: "Gain real-time insights across supply chains to forecast demand, manage inventory efficiently, and prevent bottlenecks." },
@@ -128,7 +141,7 @@ const Industries= () => {
     realestate: {
       title: "Real Estate",
       desc: "Digitally transforming property management, construction, and sales through immersive and data-driven platforms.",
-      image: "/assets/images/industries/realestate.jpg",
+      image: realestateImage,
       subSections: [
         { title: "Property Portals", desc: "Our smart listing systems feature 3D tours, location-based filters, and virtual assistance for better buyer engagement." },
         { title: "CRM Solutions", desc: "Empower your real estate business with lead tracking, pipeline management, and automated communication tools." },
@@ -138,7 +151,7 @@ const Industries= () => {
     telecom: {
       title: "Telecommunication",
       desc: "Optimizing connectivity and communication services with 5G, IoT, and cloud integration for a connected world.",
-      image: "/assets/images/industries/telecom.jpg",
+      image: telecomImage,
       subSections: [
         { title: "Network Optimization", desc: "We enhance network efficiency through real-time monitoring, bandwidth allocation, and predictive traffic control." },
         { title: "IoT Connectivity", desc: "Connect millions of devices securely using next-gen IoT networks that enhance user experience and operational intelligence." },
@@ -148,7 +161,7 @@ const Industries= () => {
     transport: {
       title: "Transportation & Logistics",
       desc: "Accelerating logistics and mobility with real-time tracking, automation, and route optimization for global supply chains.",
-      image: "/assets/images/industries/transport.jpg",
+      image: transportImage,
       subSections: [
         { title: "Fleet Management", desc: "Monitor vehicle health, routes, and driver performance using GPS and IoT-powered fleet management dashboards." },
         { title: "Route Optimization", desc: "Our AI algorithms calculate the most efficient delivery routes, reducing travel time, fuel costs, and environmental impact." },
@@ -258,7 +271,7 @@ const Industries= () => {
             collaborative delivery, and post-launch support that ensures your product’s longevity.</p>
           </div>
 
-          <div className="why-card">
+          {/* <div className="why-card">
             <h4>⚙ Scalable & Future-Ready Architecture</h4>
             <p>Our cloud-native and modular architecture ensures your systems can handle 
             increased demand and easily adapt to new technologies or integrations.</p>
@@ -268,7 +281,7 @@ const Industries= () => {
             <h4>🌍 Global Expertise, Local Impact</h4>
             <p>With experience across diverse industries, we understand your market 
             and build solutions tailored to regional and global business challenges.</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

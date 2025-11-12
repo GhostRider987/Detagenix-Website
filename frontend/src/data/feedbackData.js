@@ -1,39 +1,40 @@
+import surya from "../asset/feedback/surya prakash vaishnav.jpg";
+import fastcad from "../asset/feedback/Fastcad.png";
+import mahohar from "../asset/feedback/manohar.jpg";
+import devkripa from "../asset/feedback/dev.jpg";
+// import punam from "../asset/feedback/punam.jpg";
+import ennobridge from "../asset/feedback/enno.jpg";
 export const feedbackData = [ 
     {
-      id: 1,
-       name: "Shubham Singh",
-      // role: "Marketing Director",
-      // company: "TechSolutions Inc.",
-      feedback: "Working with this team transformed our digital presence. Their attention to detail and creative approach delivered results beyond our expectations.",
-       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80",
-      rating: 5
-    },
+    id: 1,
+    name: "Surya Prakash Vaishnav",
+    feedback: "Detagenix helped us streamline our data operations effortlessly.Their team understood our needs perfectly and delivered on time.A reliable tech partner we’d recommend to anyone.",
+    rating: 5,
+    image: surya,
+    // company: "FAST cad coding",
+    companyImage: fastcad
+  },
     {
       id: 2,
-       name: "Michael Chen",
+       name: "Mahohar patidar",
       // role: "Product Manager",
-      // company: "InnovateLabs",
+      //  company: "dev kripa farm",
       feedback: "The level of professionalism and expertise demonstrated was outstanding. They delivered our project ahead of schedule with exceptional quality.",
-       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80",
-      rating: 5
+       image: mahohar,
+      rating: 5,
+      companyImage: devkripa 
+
     },
     {
       id: 3,
-       name: "Emma Rodriguez",
+       name: "punam surnaik",
       //  role: "CEO",
-      //  company: "GrowthStartups",
+      //  company: "ennobridge",
       feedback: "Their strategic insights helped us pivot at a critical time. The results have been transformative for our business growth.",
-       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80",
-      rating: 5
+      //  image: " "
+      rating: 5,
+      companyImage:ennobridge
     },
-    {
-      id: 4,
-       name: "David Wilson",
-      //  role: "Operations Director",
-      //  company: "GlobalConnect",
-      feedback: "Exceptional service from start to finish. The team was responsive, innovative, and truly understood our business needs.",
-       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80",
-      rating: 5
-    },
+    
     
   ];

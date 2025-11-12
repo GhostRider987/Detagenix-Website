@@ -14,7 +14,14 @@
   position: relative;
   font-size: 3rem;
 }
-
+.services-grid {
+  width:60%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 /* LEARN MORE BUTTON */
 .service-page .learn-more-btn {
   margin-top: 12px;

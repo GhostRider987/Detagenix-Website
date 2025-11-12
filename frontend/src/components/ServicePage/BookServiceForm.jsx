@@ -9,8 +9,10 @@ const BookServiceForm = ({ serviceName, onClose }) => {
     name: "",
     email: "",
     service: serviceName || "",
+    technology: "", // 👈 added field
   });
-  const [status, setStatus] = useState(""); // success/error message
+
+  const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -20,9 +22,8 @@ const BookServiceForm = ({ serviceName, onClose }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("");
-    
 
-    if (!form.name || !form.email || !form.service) {
+    if (!form.name || !form.email || !form.service || !form.technology) {
       setStatus("Please fill all fields");
       return;
     }
@@ -40,7 +41,7 @@ const BookServiceForm = ({ serviceName, onClose }) => {
       if (!res.ok) throw new Error(data.message || "Booking failed");
 
       setStatus("✅ Service booked successfully!");
-      setForm({ name: "", email: "", service: "" });
+      setForm({ name: "", email: "", service: "", technology: "" });
     } catch (err) {
       setStatus(`❌ ${err.message}`);
     } finally {
@@ -60,6 +61,7 @@ const BookServiceForm = ({ serviceName, onClose }) => {
             type="text"
             name="name"
             placeholder="Your Name"
+            required
             value={form.name}
             onChange={handleChange}
           />
@@ -67,16 +69,35 @@ const BookServiceForm = ({ serviceName, onClose }) => {
             type="email"
             name="email"
             placeholder="Your Email"
+            required
             value={form.email}
             onChange={handleChange}
           />
-          <input
-            type="text"
+
+          {/* 👇 New Technology Dropdown */}
+          <select
+            name="technology"
+            value={form.technology}
+            required
+            onChange={handleChange}
+          >
+            <option value="">Select Technology</option>
+            <option value="ReactJS">ReactJS</option>
+            <option value="NodeJS">NodeJS</option>
+            <option value="MERN Stack">MERN Stack</option>
+            <option value="Python/Django">Python/Django</option>
+            <option value="Java Spring Boot">Java Spring Boot</option>
+            <option value="AWS Cloud">AWS Cloud</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <textarea
             name="service"
             placeholder="Your Requirements"
             value={form.service}
             onChange={handleChange}
           />
+
           <button type="submit" className="submit-btn" disabled={loading}>
             {loading ? "Booking..." : "Submit"}
           </button>

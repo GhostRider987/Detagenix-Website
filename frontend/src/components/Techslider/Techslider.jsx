@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Techslider.css';
-
+import { useEffect } from 'react';
 // ✅ Import Icons
 import { FaRobot, FaCloud, FaShieldAlt, FaMobileAlt, FaGlobe, FaChartLine, FaBolt, FaLink } from "react-icons/fa";
 
@@ -9,6 +9,15 @@ import { TbDeviceMobileCog } from "react-icons/tb";  // IoT icon
 
 const Techslider = () => {
   const [isPaused, setIsPaused] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // run once
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+    
+
 
   const techData = [
     {
@@ -63,11 +72,14 @@ const Techslider = () => {
   ];
 
   const duplicatedSlides = [...techData, ...techData];
+  const slides = isMobile ? techData : [...techData, ...techData];
 
   return (
     <div className="tech-slider-container">
       <h1>Our Technology Stack</h1>
 
+      {/* ✅ Show Swipe Hint on Mobile */}
+      {isMobile && <p className="swipe-hint">← Swipe to explore more →</p>}
       <div
         className={`slider-container ${isPaused ? 'paused' : ''}`}
         onMouseEnter={() => setIsPaused(true)}

@@ -148,54 +148,156 @@
   text-align: center;
   padding: 1.5rem 0 3rem 0;
 }
+.service-grids {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 2rem;
+  max-width: 1200px;
+  
+  margin: 0 auto;
+}
 
 /* =========================================================
    ✅ STATS SECTION (Very Responsive)
    ========================================================= */
 .stats-bar {
-  padding: 3rem 2rem;
-  background: #1e293b;
-  color: white;
+  margin: 5rem auto;
+  width: 80%;
+  overflow: hidden;
+  background: #0f172a;
+  color: #fff;
+  padding: 20px 0;
 }
 
-.stats-container {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 2rem;
-  text-align: center;
+.stats-slider {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.stats-track {
+  display: flex;
+  animation: scroll 25s linear infinite;
 }
 
 .stat-item {
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.3s ease;
+  min-width: 200px;
+  text-align: center;
+  margin: 0 40px;
+  flex-shrink: 0;
+  background-color: white;
+  color: #0f172a;
+  padding: 30px;
+  border-radius: 15px;
 }
-
-.stat-item:hover {
-  transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.2);
+.stats-bar h1{
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #00bfff;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  font-size: 2.5rem;
 }
 
 .stat-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 10px;
 }
 
 .stat-number {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .stat-label {
-  font-size: 1rem;
-  opacity: 0.9;
-  font-weight: 500;
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+/* Keyframes for infinite scroll */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ----------------------------------- */
+/* RESPONSIVE DESIGN BREAKPOINTS       */
+/* ----------------------------------- */
+
+@media (max-width: 1024px) {
+  .stat-item {
+    min-width: 160px;
+    margin: 0 25px;
+  }
+
+  .stat-icon {
+    font-size: 1.8rem;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  .stats-track {
+    animation: scroll 30s linear infinite; /* slower */
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-item {
+    min-width: 140px;
+    margin: 0 20px;
+  }
+
+  .stat-icon {
+    font-size: 1.6rem;
+  }
+
+  .stat-number {
+    font-size: 1.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.85rem;
+  }
+
+  .stats-track {
+    animation: scroll 35s linear infinite; /* even slower for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  .stat-item {
+    min-width: 120px;
+    margin: 0 15px;
+  }
+
+  .stat-icon {
+    font-size: 1.4rem;
+  }
+
+  .stat-number {
+    font-size: 1.1rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .stats-track {
+    animation: scroll 40s linear infinite;
+  }
 }
 
 /* =========================================================
@@ -240,7 +342,29 @@
   justify-content: center;
   align-items: center;
 }
+.about-content h2 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.about-content p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+.about-btn {
+  display: block;
+  margin: 0 auto;
+}
+.service-grids {
+  display: grid;
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    gap: 1.2rem;
+  }
   /* Stats Section */
   .stats-bar {
     padding: 2rem 1rem;

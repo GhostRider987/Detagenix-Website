@@ -17,7 +17,9 @@ import {
 
 const Technologies = () => {
   const [activeCategory, setActiveCategory] = useState("genai");
-
+useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const techCategories = [
     { id: "genai", name: "Generative AI" },
     { id: "fullstack", name: "Full Stack Development" },

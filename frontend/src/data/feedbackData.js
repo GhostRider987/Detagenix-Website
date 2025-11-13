@@ -16,13 +16,13 @@ export const feedbackData = [
   },
     {
       id: 2,
-       name: "Mahohar patidar",
+       name: "Chris Martin",
       // role: "Product Manager",
       //  company: "dev kripa farm",
-      feedback: "The level of professionalism and expertise demonstrated was outstanding. They delivered our project ahead of schedule with exceptional quality.",
-       image: mahohar,
+      feedback: "Enjoyed working with this team.They followed through with deliverables on project",
+       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80",
       rating: 5,
-      companyImage: devkripa 
+      companyImage: "" 
 
     },
     {
@@ -34,6 +34,16 @@ export const feedbackData = [
         image: " https://images.unsplash.com/photo-1611451444023-7fe9d86fe1d0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cG9ydHJhaXQlMjB3b21hbnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=200&q=80",
       rating: 5,
       companyImage:ennobridge
+    },
+    {
+      id: 4,
+       name: "Brian B",
+      //  role: "CEO",
+      //  company: "ennobridge",
+      feedback: "Their strategic insights helped us pivot at a critical time. The results have been transformative for our business growth.",
+        image: " https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8ZmVlbWFsZSUyMGNlcmVtb25pYWwlMjBwYXlsaW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=80",
+      rating: 5,
+      companyImage:""
     },
     
     

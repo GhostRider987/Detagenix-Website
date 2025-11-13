@@ -31,7 +31,9 @@ import {
 
 const Industries= () => {
   const [activeIndustry, setActiveIndustry] = useState("cybersecurity");
-
+useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
   const industries = [
     { id: "cybersecurity", name: "Cybersecurity", icon: <FaLock /> },
     { id: "ecommerce", name: "E-Commerce & Retail", icon: <FaShoppingCart /> },

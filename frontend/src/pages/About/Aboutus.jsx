@@ -87,7 +87,7 @@ function About() {
       <section className="about-intro container text-center fade-up">
         <h1 className="section-title">Detagenix: Driving Innovation and Digital Excellence</h1>
         <p className="lead">
-          <span className="highlight">Detagenix</span> is a dynamic IT consulting and digital transformation company
+          {/* <span className="highlight">Detagenix</span>*/} Organization is a dynamic IT consulting and digital transformation company 
           dedicated to empowering businesses with cutting-edge, scalable technology solutions. We go beyond basic
           software development to craft tailored, enterprise-grade applications, specializing in robust technologies
           like the <strong>MERN Stack</strong> and advanced services such as <strong>AI/ML & Data Modeling</strong>.
